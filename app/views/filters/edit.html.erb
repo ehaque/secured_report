@@ -1,0 +1,25 @@
+<h1>Editing filter</h1>
+
+<%= form_for(@filter) do |f| %>
+
+<div>
+<%= f.label :name %><br />
+<%= f.text_field :name %>
+</div>
+<div>
+<%= f.label :field_name %><br />
+<%= f.text_field :field_name %>
+</div>
+<div>
+<%= f.label :operation %><br />
+
+<%= select "filter", "operation" , {"greater" => ">", "less" => "<","equal" => "=", "not equal" => "<>" } %>
+</div>
+<div>
+<%= f.label :value %><br />
+<%= f.text_field :value %>
+</div>
+<div>
+<%= f.submit "Update" %>
+</div>
+<% end %>
